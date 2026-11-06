@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLEGIO CORALIA QUIROZ | Contacto</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sesion.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">COLEGIO CORALIA QUIROZ</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">☰</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="oferta.html">Oferta académica</a></li>
+                <li><a href="matricula.html">Matrícula y admisión</a></li>
+                <li><a href="contacto.html" class="activo">Contacto</a></li>
+                <li><a href="login.html" id="enlace-sesion">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="encabezado-pagina">
+            <h1>Contacto</h1>
+            <p>Escríbenos o visítanos, con gusto te atendemos.</p>
+        </section>
+
+        <section class="contacto-layout">
+            <article class="contacto-datos">
+                <h2>Datos de contacto</h2>
+                <ul class="lista-contacto">
+                    <li>
+                        <strong>Dirección</strong>
+                        <span>Colonia Los Pinos, calle principal, San Salvador</span>
+                    </li>
+                    <li>
+                        <strong>Teléfono</strong>
+                        <span>7777-7777</span>
+                    </li>
+                    <li>
+                        <strong>Correo</strong>
+                        <span>info@coraliaquiroz.edu.sv</span>
+                    </li>
+                    <li>
+                        <strong>Horario</strong>
+                        <span>Lunes a viernes, 7:00 a.m. a 4:00 p.m.</span>
+                    </li>
+                </ul>
+            </article>
+
+            <form class="formulario tarjeta-contacto" action="#" method="post">
+                <p class="aviso">Para enviar este formulario necesitas <a href="login.html">iniciar sesión</a>.</p>
+                <h2>Envíanos un mensaje</h2>
+
+                <div class="fila">
+                    <div class="campo">
+                        <label for="c-nombre">Nombre</label>
+                        <input type="text" id="c-nombre" name="nombre" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="campo">
+                        <label for="c-correo">Correo electrónico</label>
+                        <input type="email" id="c-correo" name="correo" placeholder="nombre@correo.com" required>
+                    </div>
+                </div>
+
+                <div class="campo">
+                    <label for="c-asunto">Asunto</label>
+                    <select id="c-asunto" name="asunto" required>
+                        <option value="" disabled selected>Selecciona un asunto</option>
+                        <option value="admisiones">Información de admisiones</option>
+                        <option value="visita">Visita al colegio</option>
+                        <option value="academica">Consulta académica</option>
+                        <option value="otro">Otro</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <label for="c-mensaje">Mensaje</label>
+                    <textarea id="c-mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí" required></textarea>
+                </div>
+
+                <button type="submit" class="boton">Enviar mensaje</button>
+            </form>
+        </section>
+
+        <section class="mapa">
+            <iframe 
+                src="

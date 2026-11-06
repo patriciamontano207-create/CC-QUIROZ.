@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COLEGIO CORALIA QUIROZ | Matrícula y Admisión</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sesion.js" defer></script>
+</head>
+<body>
+    <header>
+        <a href="index.html">COLEGIO CORALIA QUIROZ</a>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-boton" aria-label="Abrir menú">☰</label>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="oferta.html">Oferta académica</a></li>
+                <li><a href="matricula.html" class="activo">Matrícula y admisión</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="login.html" id="enlace-sesion">Iniciar sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="encabezado-pagina">
+            <h1>Matrícula y admisión</h1>
+            <p>Da el primer paso para ser parte de la familia Quiroz.</p>
+        </section>
+
+        <ol class="pasos">
+            <li>
+                <h2>Llena el formulario</h2>
+                <p>Completa los datos del estudiante y del encargado.</p>
+            </li>
+            <li>
+                <h2>Adjunta tus documentos</h2>
+                <p>Partida de nacimiento y certificado de notas.</p>
+            </li>
+            <li>
+                <h2>Te contactamos</h2>
+                <p>Nos comunicaremos contigo para coordinar la entrevista.</p>
+            </li>
+        </ol>
+
+        <section class="matricula-layout">
+            <aside class="info-lateral">
+                <figure>
+                    <img src="LILI.avif" alt="Docente atendiendo a una familia en el proceso de admisión" loading="lazy">
+                </figure>
+                <h2>Antes de empezar</h2>
+                <ul class="requisitos">
+                    <li>Partida de nacimiento del estudiante</li>
+                    <li>Certificado de notas del último grado</li>
+                    <li>Datos de contacto del encargado</li>
+                    <li>Constancia de conducta (si viene de otro colegio)</li>
+                </ul>
+                <div class="contacto-rapido">
+                    <h3>¿Tienes dudas?</h3>
+                    <p>Llámanos al <strong>7777-7777</strong></p>
+                    <p>Lunes a viernes, 7:00 a.m. a 4:00 p.m.</p>
+                </div>
+            </aside>
+
+            <form action="#" method="post" class="formulario">
+                <p class="aviso">Para enviar este formulario necesitas <a href="login.html">iniciar sesión</a>.</p>
+                
+                <fieldset class="tarjeta-form">
+                    <legend>Datos del estudiante</legend>
+
+                    <div class="fila">
+                        <div class="campo">
+                            <label for="nombres">Nombres</label>
+                            <input type="text" id="nombres" name="nombres" placeholder="Ej: María José" required>
+                        </div>
+                        <div class="campo">
+                            <label for="apellidos">Apellidos</label>
+                            <input type="text" id="apellidos" name="apellidos" placeholder="Ej: López Rivas" required>
+                        </div>
+                    </div>
+
+                    <div class="fila">
+                        <div class="campo">
+                            <label for="nacimiento">Fecha de nacimiento</label>
+                            <input type="date" id="nacimiento" name="nacimiento" required>
+                        </div>
+                        <div class="campo">
+                            <label for="grado">Grado al que desea ingresar</label>
+                            <select id="grado" name="grado" required>
+                                <option value="" disabled selected>Selecciona un grado</option>
+                                <optgroup label="Parvularia">
+                                    <option value="k4">Kinder 4</option>
+                                    <option value="k5">Kinder 5</option>
+                                    <option value="prep">Preparatoria</option>
+                                </optgroup>
+                                <optgroup label="Educación básica">
+                                    <option value="b-13">1° a 3°</option>
+                                    <option value="b-46">4° a 6°</option>
+                                    <option value="b-79">7° a 9°</option>
+                                </optgroup>
+                                <optgroup label="Bachillerato">
+                                    <option value="bach-gen">Bachillerato general</option>
+                                    <option value="bach-tec">Bachillerato técnico</option>
+                                </optgroup>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="procedencia">Colegio de procedencia</label>
+                        <input type="text" id="procedencia" name="procedencia" placeholder="Si es de primer ingreso, escribe «Ninguno»">
+                    </div>
+                </fieldset>
+
+                <fieldset class="tarjeta-form">
+                    <legend>Datos del encargado</legend>
+
+                    <div class="campo">
+                        <label for="encargado">Nombre completo</label>
+                        <input type="text" id="encargado" name="encargado" placeholder="Nombre del padre, madre o tutor" required>
+                    </div>
+
+                    <div class="fila">
+                        <div class="campo">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono" placeholder="7777-7777" pattern="[0-9]{4}-?[0-9]{4}" title="Escribe 8 dígitos, con o sin guion" required>
+                        </div>
+                        <div class="campo">
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" id="email" name="email" placeholder="encargado@correo.com" required>
+                        </div>
+                    </div>
+
+                    <div class="campo">
+                        <label for="comentarios">Comentarios (opcional)</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" placeholder="Cuéntanos algo que debamos saber"></textarea>
+                    </div>
+                </fieldset>
+
+                <fieldset class="tarjeta-form">
+                    <legend>Documentos</legend>
+
+                    <div class="campo">
+                        <label for="partida">Partida de nacimiento (PDF o imagen)</label>
+                        <input type="file" id="partida" name="partida" accept=".pdf,.jpg,.jpeg,.png" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="notas">Certificado de notas (PDF o imagen)</label>
+                        <input type="file" id="notas" name="notas" accept=".pdf,.jpg,.jpeg,.png">
+                    </div>
+                </fieldset>
+
+                <div class="campo-check">
+                    <input type="checkbox" id="acepto" name="acepto" required>
+                    <label for="acepto">Acepto que el colegio use estos datos para el proceso de admisión.</label>
+                </div>
+
+                <button type="submit" class="boton">Enviar solicitud</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Colegio Coralia Quiroz. Proyecto Educativo.</p>
+    </footer>
+</body>
+</html>
